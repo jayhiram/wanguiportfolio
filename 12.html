@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Wangui Hiram</title>
+        <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    </head>
+<body>
+
+    <!-- TOP CONTACT BAR -->
+    <div class="top-contact">
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+254712345678">+254 785 810 010</a>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:wanguihiram04@gmail.com">wanguihiram04@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Nairobi, Kenya</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN NAVBAR -->
+    <header>
+        <nav class="navbar" id="navbar">
+            <div class="logo">Wangui Hiram</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars" id="menu-open"></i>
+                <i class="fas fa-times" id="menu-close"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobile-menu">
+        <ul class="mobile-nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+
+    <style>
+        /* ===== ABOUT PAGE ===== */
+
+/* About Section */
+.about-section {
+    padding: 80px 10%;
+    background: #f9f9f9;
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 450px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.about-text {
+    flex: 1;
+    min-width: 280px;
+}
+
+.about-text h1 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.about-text p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.about-text .btn {
+    display: inline-block;
+    background: #0077b6;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.about-text .btn:hover {
+    background: #005f86;
+}
+
+/* ===== Skills Section in About ===== */
+.about-skills {
+    padding: 70px 10%;
+    background: white;
+    text-align: center;
+}
+
+.about-skills h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #222;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.skill-card {
+    background: #f1f1f1;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.skill-card h3 {
+    color: #0077b6;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* ===== Vision & Mission ===== */
+.vision-mission {
+    background: #f0f9ff;
+    padding: 60px 10%;
+    text-align: center;
+}
+
+.vision-mission h2 {
+    font-size: 1.8rem;
+    margin-top: 20px;
+    color: #0077b6;
+}
+
+.vision-mission p {
+    max-width: 800px;
+    margin: 10px auto 20px;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* ===== Core Values ===== */
+.core-values {
+    padding: 60px 10%;
+    background: white;
+}
+
+.core-values h2 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    text-align: center;
+    color: #0077b6;
+}
+
+.core-values ul {
+    list-style: none;
+    max-width: 800px;
+    margin: auto;
+    padding: 0;
+}
+
+.core-values ul li {
+    background: #f9f9f9;
+    margin: 10px 0;
+    padding: 15px;
+    border-left: 5px solid #0077b6;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image img {
+        max-width: 100%;
+    }
+}
+
+    </style>
+
+
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="images/profile1.jpg" alt="Wangui Hiram">
+            </div>
+            <div class="about-text">
+                <h1>About Me</h1>
+                <p>
+                    Hello! I’m <strong>Wangui Hiram</strong>, a passionate Software Developer specializing in creating 
+                    clean, functional, and user-friendly digital solutions. With a strong background in 
+                    <b>Python, HTML, CSS, and web development</b>, I thrive on solving problems 
+                    and bringing ideas to life through code.
+                </p>
+                <p>
+                    My journey in tech began with a curiosity about how software works, which quickly 
+                    evolved into a deep love for building and improving applications. Whether it’s 
+                    developing a responsive website, creating efficient algorithms, or analyzing data 
+                    to uncover insights, I enjoy the challenge of turning concepts into reality.
+                </p>
+                <p>
+                    When I’m not coding, I’m exploring emerging technologies, contributing to open-source projects, 
+                    and sharing knowledge with the tech community. I believe in continuous learning 
+                    and collaboration to create impactful solutions.
+                </p>
+                <a href="contact.html" class="btn">Get In Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+<section class="about-skills">
+    <h2>Things I Do & Skills</h2>
+    <div class="skills-grid">
+        <div class="skill-card">
+            <img src="images/software.jpg" alt="Web Development">
+            <h3>Web Development</h3>
+            <p>Building responsive, SEO-friendly websites using HTML, CSS, and JavaScript.</p>
+        </div>
+        <div class="skill-card">
+            <img src="images/software.jpg" alt="Python Programming">
+            <h3>Python Programming</h3>
+            <p>Developing software, automation scripts, and data analysis solutions.</p>
+        </div>
+        <div class="skill-card">
+            <img src="images/data.jpg" alt="Data Analysis">
+            <h3>Data Analysis</h3>
+            <p>Extracting insights from data to support decision-making.</p>
+        </div>
+        <div class="skill-card">
+            <img src="images/digital.png" alt="Digital Strategy">
+            <h3>Digital Strategy</h3>
+            <p>Helping brands grow and connect with audiences online.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Vision & Mission -->
+<section class="vision-mission">
+    <div class="container">
+        <h2>Vision</h2>
+        <p>To become a leading innovator in technology, delivering solutions that inspire change and empower communities.</p>
+        <h2>Mission</h2>
+        <p>To create impactful, user-friendly digital solutions that align with client goals and drive measurable success.</p>
+    </div>
+</section>
+
+<!-- Core Values -->
+<section class="core-values">
+    <div class="container">
+        <h2>Core Values</h2>
+        <ul>
+            <li><b>Innovation</b> – Continuously seeking creative, forward-thinking solutions.</li>
+            <li><b>Integrity</b> – Delivering results with transparency and trust.</li>
+            <li><b>Excellence</b> – Striving for quality in every project.</li>
+            <li><b>Collaboration</b> – Partnering with clients for shared success.</li>
+        </ul>
+    </div>
+</section>
+
+
+<!-- PREMIUM FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Main Footer Content -->
+            <div class="footer-content">
+                <!-- About Section -->
+                <div class="footer-section about">
+                    <h3 class="footer-logo">Wangui Hiram</h3>
+                    <p class="footer-desc">
+                        Passionate web developer and designer crafting exceptional digital experiences. 
+                        Specializing in modern web technologies and user-centered design solutions.
+                    </p>
+                    <div class="footer-contact">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Nairobi, Kenya</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+254712345678">+254 785 810 010</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:wanguihiram04@mail.com">wanguihiram04@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section links">
+                    <h4 class="section-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i>Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i>About Me</a></li>
+                        <li><a href="projects.html"><i class="fas fa-chevron-right"></i>Projects</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i>Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="footer-section services">
+                    <h4 class="section-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-code"></i>Web Development</a></li>
+                        <li><a href="#"><i class="fas fa-paint-brush"></i>UI/UX Design</a></li>
+                        <li><a href="#"><i class="fas fa-search"></i>SEO Optimization</a></li>
+                        <li><a href="#"><i class="fas fa-rocket"></i>Performance</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter & Social -->
+                <div class="footer-section newsletter">
+                    <h4 class="section-title">Stay Connected</h4>
+
+                    <div class="social-links">
+                        <a href="#" class="social-link linkedin" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link github" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link twitter" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link instagram" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link dribbble" aria-label="Dribbble">
+                            <i class="fab fa-dribbble"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p class="copyright">
+                        &copy; <span id="currentYear">2024</span> Wangui Hiram. All rights reserved. 
+                        <span class="love">Made with <i class="fas fa-heart"></i> in Nairobi</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back to Top Button -->
+        <div class="back-to-top" id="backToTop">
+            <i class="fas fa-chevron-up"></i>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+   <script>
+        // Mobile menu toggle functionality
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuOpen = document.getElementById('menu-open');
+        const menuClose = document.getElementById('menu-close');
+
+        hamburger.addEventListener('click', function() {
+            mobileMenu.classList.toggle('active');
+            
+            if (mobileMenu.classList.contains('active')) {
+                menuOpen.style.display = 'none';
+                menuClose.style.display = 'block';
+            } else {
+                menuOpen.style.display = 'block';
+                menuClose.style.display = 'none';
+            }
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                menuOpen.style.display = 'block';
+                menuClose.style.display = 'none';
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!hamburger.contains(event.target) && !mobileMenu.contains(event.target)) {
+                mobileMenu.classList.remove('active');
+                menuOpen.style.display = 'block';
+                menuClose.style.display = 'none';
+            }
+        });
+
+        // Add scrolled class to navbar for backdrop blur effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Active navigation highlighting
+        const navLinks = document.querySelectorAll('.nav-links a, .mobile-nav-links a');
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+                link.classList.add('active');
+            }
+        });
+
+        // Footer functionality
+        // Current year update
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Newsletter form submission
+        const newsletterForm = document.getElementById('newsletterForm');
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            
+            // Simple validation
+            if (email) {
+                // Simulate form submission
+                const button = this.querySelector('button');
+                const originalHTML = button.innerHTML;
+                button.innerHTML = '<i class="fas fa-check"></i>';
+                button.style.background = 'linear-gradient(135deg, #28a745, #20c997)';
+                
+                setTimeout(() => {
+                    button.innerHTML = originalHTML;
+                    button.style.background = 'linear-gradient(135deg, #C9A66B, #D4B876)';
+                    this.reset();
+                }, 2000);
+                
+                // You can add actual form submission logic here
+                console.log('Newsletter subscription:', email);
+            }
+        });
+
+        // Back to top functionality
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Social link hover effects
+        const socialLinks = document.querySelectorAll('.social-link');
+        socialLinks.forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-3px) scale(1.1) rotate(5deg)';
+            });
+            
+            link.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1) rotate(0deg)';
+            });
+        });
+
+        // Footer contact links click tracking (optional)
+        const footerContactLinks = document.querySelectorAll('.footer-contact a');
+        footerContactLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                // Add analytics or tracking here if needed
+                console.log('Footer contact clicked:', this.textContent);
+            });
+        });
+    </script>
+</body>
+</html>

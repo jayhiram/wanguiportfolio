@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Wangui Hiram</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+
+</head>
+<body>
+    <!-- TOP CONTACT BAR -->
+    <div class="top-contact">
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+254712345678">+254 785 810 010</a>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:wanguihiram04@gmail.com">wanguihiram04@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Nairobi, Kenya</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN NAVBAR -->
+    <header>
+        <nav class="navbar" id="navbar">
+            <div class="logo">Wangui Hiram</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars" id="menu-open"></i>
+                <i class="fas fa-times" id="menu-close"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobile-menu">
+        <ul class="mobile-nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+
+
+
+    <style>
+    /* Projects Section */
+.projects {
+    padding: 80px 5%;
+    background: #F5F1EA;
+    min-height: 100vh;
+}
+
+.projects h2 {
+    text-align: center;
+    margin-bottom: 60px;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #4B4B4B;
+    position: relative;
+}
+
+.projects h2::after {
+    content: '';
+    width: 80px;
+    height: 4px;
+    background: #C9A66B;
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.project {
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+    gap: 50px;
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px;
+    border: 1px solid #E0D7C6;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.project::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.project:hover::before {
+    left: 100%;
+}
+
+.project:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+}
+
+.project.reverse {
+    flex-direction: row-reverse;
+}
+
+.project-text {
+    flex: 1;
+    z-index: 2;
+}
+
+.project-text h3 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: #4B4B4B;
+    font-weight: 700;
+}
+
+.project-text .project-category {
+    display: inline-block;
+    background: #C9A66B;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.project-text p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #7D7461;
+    font-size: 1.1rem;
+}
+
+.project-description {
+    background: #F5F1EA;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+    border-left: 4px solid #C9A66B;
+}
+
+.tech-stack {
+    margin: 25px 0;
+}
+
+.tech-stack h4 {
+    color: #4B4B4B;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.tech-tag {
+    background: #E0D7C6;
+    color: #4B4B4B;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid #C9A66B;
+}
+
+.project-features {
+    margin: 20px 0;
+}
+
+.project-features h4 {
+    color: #4B4B4B;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.project-features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.project-features li {
+    padding: 8px 0;
+    color: #7D7461;
+    position: relative;
+    padding-left: 25px;
+}
+
+.project-features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #C9A66B;
+    font-weight: bold;
+}
+
+.project-image {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    height: 400px;
+    z-index: 2;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-image:hover img {
+    transform: scale(1.1);
+}
+
+.project-image .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(201, 166, 107, 0.9);
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.project-image:hover .overlay {
+    opacity: 1;
+}
+
+.overlay i {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #C9A66B;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: #7D7461;
+    transition: left 0.3s ease;
+    z-index: 1;
+}
+
+.btn:hover::before {
+    left: 0;
+}
+
+.btn span {
+    position: relative;
+    z-index: 2;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.project-separator {
+    height: 2px;
+    background: #E0D7C6;
+    margin: 60px 0;
+    position: relative;
+}
+
+.project-separator::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background: #C9A66B;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    box-shadow: 0 0 0 2px #C9A66B;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .projects {
+        padding: 50px 5%;
+    }
+    
+    .projects h2 {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+    }
+    
+    .project, .project.reverse {
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px;
+        margin-bottom: 50px;
+    }
+    
+    .project-text h3 {
+        font-size: 1.8rem;
+    }
+    
+    .project-image {
+        height: 250px;
+    }
+    
+    .tech-tags {
+        justify-content: center;
+    }
+    
+    .btn {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .projects h2 {
+        font-size: 2rem;
+    }
+    
+    .project-text h3 {
+        font-size: 1.6rem;
+    }
+    
+    .project {
+        padding: 20px;
+    }
+    
+    .project-image {
+        height: 200px;
+    }
+}
+</style>
+
+<!-- PROJECTS SECTION -->
+<section class="projects" id="projects">
+    <h2>Featured Projects</h2>
+
+    <!-- Project 1: Kioh Tours -->
+    <div class="project">
+        <div class="project-text">
+            <div class="project-category">Tourism & Travel</div>
+            <h3>Kioh Tours & Travel Agencies</h3>
+            
+            <div class="project-description">
+                <p>Developed a comprehensive travel booking platform that revolutionized how clients discover and book safari adventures across East Africa. The platform seamlessly integrates destination showcasing, real-time booking capabilities, and customer relationship management.</p>
+            </div>
+
+            <div class="tech-stack">
+                <h4>Technologies Used:</h4>
+                <div class="tech-tags">
+                    <span class="tech-tag">HTML5/CSS3</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">PHP</span>
+                    <span class="tech-tag">MySQL</span>
+                    <span class="tech-tag">Bootstrap</span>
+                    <span class="tech-tag">Payment Gateway</span>
+                </div>
+            </div>
+
+            <div class="project-features">
+                <h4>Key Features & Solutions:</h4>
+                <ul>
+                    <li>Interactive tour package catalog with detailed itineraries</li>
+                    <li>Secure online booking system with payment integration</li>
+                    <li>Multi-language support for international clients</li>
+                    <li>Mobile-responsive design for booking on-the-go</li>
+                    <li>Customer review and rating system</li>
+                    <li>Admin dashboard for tour management</li>
+                </ul>
+            </div>
+
+            <p><strong>Client Impact:</strong> Increased online bookings by 150% and streamlined the customer journey from discovery to booking confirmation, reducing manual processes by 80%.</p>
+
+            <a href="https://kiohtouragencies.com/" target="_blank" class="btn">
+                <span>Visit Website</span>
+            </a>
+        </div>
+        <div class="project-image">
+            <a href="https://kiohtouragencies.com/" target="_blank">
+<img src="projects/kiohtours.jpg" alt="Kioh Tours & Travel Agencies">
+                <div class="overlay">
+                    <i class="fas fa-external-link-alt"></i>
+                    <span>Explore Live Site</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="project-separator"></div>
+
+    <!-- Project 2: Foreda Tours -->
+    <div class="project reverse">
+        <div class="project-image">
+            <a href="https://foredatours.ac.ke/" target="_blank">
+<img src="projects/foredatours.jpg" alt="Foreda Tours">
+                <div class="overlay">
+                    <i class="fas fa-external-link-alt"></i>
+                    <span>View Project</span>
+                </div>
+            </a>
+        </div>
+        <div class="project-text">
+            <div class="project-category">Digital Tourism</div>
+            <h3>Foreda Tours</h3>
+            
+            <div class="project-description">
+                <p>Created an engaging and interactive tourism website that showcases Kenya's natural beauty while providing seamless booking experiences. The site features dynamic galleries, interactive maps, and a sophisticated booking engine.</p>
+            </div>
+
+            <div class="tech-stack">
+                <h4>Technologies Used:</h4>
+                <div class="tech-tags">
+                    <span class="tech-tag">React.js</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">Express.js</span>
+                    <span class="tech-tag">MongoDB</span>
+                    <span class="tech-tag">Stripe API</span>
+                    <span class="tech-tag">Google Maps API</span>
+                </div>
+            </div>
+
+            <div class="project-features">
+                <h4>Innovation & Features:</h4>
+                <ul>
+                    <li>360° virtual tour previews of destinations</li>
+                    <li>Real-time availability checking and booking</li>
+                    <li>Integrated weather forecasting for trip planning</li>
+                    <li>Social media integration for travel sharing</li>
+                    <li>Multi-currency payment processing</li>
+                    <li>Automated email confirmations and reminders</li>
+                </ul>
+            </div>
+
+            <p><strong>Business Results:</strong> Enhanced user engagement by 200% with interactive features and reduced booking abandonment rate from 60% to 25% through streamlined UX design.</p>
+
+            <a href="https://foredatours.ac.ke/" target="_blank" class="btn">
+                <span>Explore Platform</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="project-separator"></div>
+
+    <!-- Project 3: Midas Nib -->
+    <div class="project">
+        <div class="project-text">
+            <div class="project-category">Academic Services</div>
+            <h3>Midas Nib</h3>
+            
+            <div class="project-description">
+                <p>Built a comprehensive academic assistance platform that connects students with expert writers and researchers. The platform ensures confidentiality, quality, and timely delivery of academic services while maintaining strict ethical guidelines.</p>
+            </div>
+
+            <div class="tech-stack">
+                <h4>Technologies Used:</h4>
+                <div class="tech-tags">
+                    <span class="tech-tag">Laravel</span>
+                    <span class="tech-tag">Vue.js</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">Redis</span>
+                    <span class="tech-tag">AWS S3</span>
+                    <span class="tech-tag">Socket.io</span>
+                </div>
+            </div>
+
+            <div class="project-features">
+                <h4>Platform Capabilities:</h4>
+                <ul>
+                    <li>Secure client-writer matching system</li>
+                    <li>End-to-end encrypted communication</li>
+                    <li>Automated plagiarism checking integration</li>
+                    <li>Progress tracking and milestone management</li>
+                    <li>Secure file sharing and version control</li>
+                    <li>Quality assurance and review system</li>
+                </ul>
+            </div>
+
+            <p><strong>Technical Achievement:</strong> Implemented advanced security protocols ensuring 100% client confidentiality and developed a sophisticated matching algorithm that pairs clients with specialized writers based on subject expertise.</p>
+
+            <a href="https://www.midasnib.com/" target="_blank" class="btn">
+                <span>View Platform</span>
+            </a>
+        </div>
+        <div class="project-image">
+            <a href="https://www.midasnib.com/" target="_blank">
+ <img src="projects/midasnib.jpg" alt="Midas Nib">
+                <div class="overlay">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Academic Excellence</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="project-separator"></div>
+
+    <!-- Project 4: Zidi TVET -->
+    <div class="project reverse">
+        <div class="project-image">
+            <a href="https://ziditvet.com/" target="_blank">
+ <img src="projects/ziditvet.jpg" alt="Zidi Technical &amp; Vocational Training Institute">                <div class="overlay">
+                    <i class="fas fa-tools"></i>
+                    <span>Skills Development</span>
+                </div>
+            </a>
+        </div>
+        <div class="project-text">
+            <div class="project-category">Education Technology</div>
+            <h3>Zidi Technical & Vocational Training Institute</h3>
+            
+            <div class="project-description">
+                <p>Developed a modern educational platform for a technical and vocational training institute, featuring comprehensive course management, student portals, and digital learning resources that bridge the gap between theoretical knowledge and practical skills.</p>
+            </div>
+
+            <div class="tech-stack">
+                <h4>Technologies Used:</h4>
+                <div class="tech-tags">
+                    <span class="tech-tag">WordPress</span>
+                    <span class="tech-tag">Custom PHP</span>
+                    <span class="tech-tag">LearnDash LMS</span>
+                    <span class="tech-tag">MySQL</span>
+                    <span class="tech-tag">jQuery</span>
+                    <span class="tech-tag">SASS</span>
+                </div>
+            </div>
+
+            <div class="project-features">
+                <h4>Educational Features:</h4>
+                <ul>
+                    <li>Comprehensive course catalog with detailed syllabi</li>
+                    <li>Online application and enrollment system</li>
+                    <li>Student progress tracking and certification</li>
+                    <li>Industry partnership showcase</li>
+                    <li>Alumni success stories and job placement data</li>
+                    <li>Mobile-optimized learning resources</li>
+                </ul>
+            </div>
+
+            <p><strong>Educational Impact:</strong> Digitized the entire enrollment process, increased course visibility by 300%, and provided students with 24/7 access to learning materials, improving completion rates by 45%.</p>
+
+            <a href="https://ziditvet.com/" target="_blank" class="btn">
+                <span>Discover Programs</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- PREMIUM FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Main Footer Content -->
+            <div class="footer-content">
+                <!-- About Section -->
+                <div class="footer-section about">
+                    <h3 class="footer-logo">Wangui Hiram</h3>
+                    <p class="footer-desc">
+                        Passionate web developer and designer crafting exceptional digital experiences. 
+                        Specializing in modern web technologies and user-centered design solutions.
+                    </p>
+                    <div class="footer-contact">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Nairobi, Kenya</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+254712345678">+254 785 810 010</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:wanguihiram04@mail.com">wanguihiram04@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section links">
+                    <h4 class="section-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i>Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i>About Me</a></li>
+                        <li><a href="projects.html"><i class="fas fa-chevron-right"></i>Projects</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i>Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="footer-section services">
+                    <h4 class="section-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-code"></i>Web Development</a></li>
+                        <li><a href="#"><i class="fas fa-paint-brush"></i>UI/UX Design</a></li>
+                        <li><a href="#"><i class="fas fa-search"></i>SEO Optimization</a></li>
+                        <li><a href="#"><i class="fas fa-rocket"></i>Performance</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter & Social -->
+                <div class="footer-section newsletter">
+                    <h4 class="section-title">Stay Connected</h4>
+
+                    <div class="social-links">
+                        <a href="#" class="social-link linkedin" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link github" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link twitter" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link instagram" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link dribbble" aria-label="Dribbble">
+                            <i class="fab fa-dribbble"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p class="copyright">
+                        &copy; <span id="currentYear">2024</span> Wangui Hiram. All rights reserved. 
+                        <span class="love">Made with <i class="fas fa-heart"></i> in Nairobi</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back to Top Button -->
+        <div class="back-to-top" id="backToTop">
+            <i class="fas fa-chevron-up"></i>
+        </div>
+    </footer>
+
+
+
+
+
+
+
+   <script>
+        // Mobile menu toggle functionality
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuOpen = document.getElementById('menu-open');
+        const menuClose = document.getElementById('menu-close');
+
+        hamburger.addEventListener('click', function() {
+            mobileMenu.classList.toggle('active');
+            
+            if (mobileMenu.classList.contains('active')) {
+                menuOpen.style.display = 'none';
+                menuClose.style.display = 'block';
+            } else {
+                menuOpen.style.display = 'block';
+                menuClose.style.display = 'none';
+            }
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                menuOpen.style.display = 'block';
+                menuClose.style.display = 'none';
+            });
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!hamburger.contains(event.target) && !mobileMenu.contains(event.target)) {
+                mobileMenu.classList.remove('active');
+                menuOpen.style.display = 'block';
+                menuClose.style.display = 'none';
+            }
+        });
+
+        // Add scrolled class to navbar for backdrop blur effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Active navigation highlighting
+        const navLinks = document.querySelectorAll('.nav-links a, .mobile-nav-links a');
+        const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+
+        navLinks.forEach(link => {
+            if (link.getAttribute('href') === currentPage) {
+                link.classList.add('active');
+            }
+        });
+
+        // Footer functionality
+        // Current year update
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Newsletter form submission
+        const newsletterForm = document.getElementById('newsletterForm');
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            
+            // Simple validation
+            if (email) {
+                // Simulate form submission
+                const button = this.querySelector('button');
+                const originalHTML = button.innerHTML;
+                button.innerHTML = '<i class="fas fa-check"></i>';
+                button.style.background = 'linear-gradient(135deg, #28a745, #20c997)';
+                
+                setTimeout(() => {
+                    button.innerHTML = originalHTML;
+                    button.style.background = 'linear-gradient(135deg, #C9A66B, #D4B876)';
+                    this.reset();
+                }, 2000);
+                
+                // You can add actual form submission logic here
+                console.log('Newsletter subscription:', email);
+            }
+        });
+
+        // Back to top functionality
+        const backToTop = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+
+        backToTop.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Social link hover effects
+        const socialLinks = document.querySelectorAll('.social-link');
+        socialLinks.forEach(link => {
+            link.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-3px) scale(1.1) rotate(5deg)';
+            });
+            
+            link.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1) rotate(0deg)';
+            });
+        });
+
+        // Footer contact links click tracking (optional)
+        const footerContactLinks = document.querySelectorAll('.footer-contact a');
+        footerContactLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                // Add analytics or tracking here if needed
+                console.log('Footer contact clicked:', this.textContent);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wangui Hiram | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+
+</head>
+<body>
+    <!-- TOP CONTACT BAR -->
+    <div class="top-contact">
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                <a href="tel:+254712345678">+254 785 810 010</a>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <a href="mailto:wanguihiram04@gmail.com">wanguihiram04@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Nairobi, Kenya</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN NAVBAR -->
+    <header>
+        <nav class="navbar" id="navbar">
+            <div class="logo">Wangui Hiram</div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars" id="menu-open"></i>
+                <i class="fas fa-times" id="menu-close"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobile-menu">
+        <ul class="mobile-nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+
+
+<style>
+        
+/* ================== ABOUT ================== */
+
+.about-home {
+    padding: 60px 50px;
+    background-color: #F5F1EA;
+}
+
+.about-home-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.about-home-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-home-text h2 {
+    font-size: 34px;
+    color: #4B4B4B;
+    margin-bottom: 20px;
+}
+
+.about-home-text p {
+    color: #7D7461;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.about-home-image {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-home-image img {
+    width: 100%;
+    max-width: 400px; /* Increased size */
+    border-radius: 16px; /* Slightly more rounded */
+    box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+    transition: transform 0.3s ease;
+}
+
+.about-home-image img:hover {
+    transform: scale(1.05); /* Interactive hover effect */
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+    .about-home-container {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .about-home-image img {
+        max-width: 300px;
+    }
+}
+
+/* ================== SKILLS ================== */
+/* Skills Section */
+.skills {
+    padding: 60px 20px;
+    background-color: #F5F1EA; /* Main background color */
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 2rem;
+    color: #4B4B4B;
+    margin-bottom: 40px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.skill-card {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 250px; /* Reduced height for rectangular look */
+}
+
+.skill-card img {
+    width: 100%;
+    height: 50%; /* Top half of the card */
+    object-fit: cover; /* Keeps image proportional */
+}
+
+.skill-card h3 {
+    font-size: 1.2rem;
+    color: #4B4B4B;
+    margin: 10px 0 5px;
+}
+
+.skill-card p {
+    font-size: 0.95rem;
+    color: #7D7461;
+    padding: 0 15px 15px;
+}
+
+.skill-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+
+/* ================== PROJECTS ================== */
+/* ================== PROJECTS SECTION ================== */
+.projects {
+    padding: 60px 50px;
+    background-color: #E0D7C6;
+    text-align: center;
+}
+
+.projects h2 {
+    font-size: 36px;
+    color: #4B4B4B;
+    margin-bottom: 40px;
+}
+
+.projects-grid {
+    display: grid;
+    gap: 30px;
+    justify-content: center;
+}
+
+/* Large screens: 2 columns x 2 rows */
+@media screen and (min-width: 992px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 400px; /* Equal height for cards */
+    }
+}
+
+/* Medium screens: 2 columns */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 350px;
+    }
+}
+
+/* Small screens: 1 column */
+@media screen and (max-width: 767px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        grid-auto-rows: auto;
+    }
+}
+
+.project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+.project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+}
+
+.project-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(201, 166, 107, 0.85); /* warm gold-beige overlay */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 20px;
+    text-align: center;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-overlay h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.project-overlay p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.project-overlay a {
+    background-color: #4B4B4B;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.project-overlay a:hover {
+    background-color: #fff;
+    color: #4B4B4B;
+}
+
+
+/* ================== EXPERIENCE ================== */
+.experience {
+    padding: 60px 50px;
+    text-align: center;
+}
+
+.experience-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.experience-card {
+    background: #E0D7C6;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+
+    </style>
+
+<!-- HERO SECTION -->
+<section class="hero" style="background-image: url('images/background1.png');">
+    <div class="hero-overlay">
+        <h1>Hello, I’m Wangui Hiram</h1>
+        <p>Software Developer | Data-Driven Insights | Digital Strategy</p>
+        <div class="cta-buttons">
+            <a href="#projects" class="btn">See Projects</a>
+            <a href="contact.html" class="btn btn-alt">Contact Me</a>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section class="about-home">
+    <div class="about-home-container">
+        <div class="about-home-text">
+            <h2>About Me</h2>
+            <p>Hello World. From my first lines of code, I’ve been passionate about creating solutions that make a difference. I combine creativity, technology, and data-driven thinking to help projects and brands grow.</p>
+            <p>With experience in software development, data analysis, and digital strategy, I aim to turn ideas into impactful solutions. I thrive on problem-solving and love collaborating with teams to create products that matter.</p>
+            <a href="about.html" class="btn">See More</a>
+        </div>
+        <div class="about-home-image">
+            <img src="images/profile1.jpg" alt="Wangui Hiram">
+        </div>
+    </div>
+</section>
+
+<!-- SKILLS SECTION -->
+<section class="skills" id="skills">
+    <h2>My Skills</h2>
+    <div class="skills-grid">
+        <div class="skill-card">
+            <img src="images/software.jpg" alt="Software Development">
+            <h3>Software Development</h3>
+            <p>Creating efficient, scalable, and user-friendly applications for web and mobile platforms.</p>
+        </div>
+        <div class="skill-card">
+            <img src="images/data.jpg" alt="Data-Driven Insights">
+            <h3>Data-Driven Insights</h3>
+            <p>Analyzing data to uncover trends and actionable insights that drive business decisions.</p>
+        </div>
+        <div class="skill-card">
+            <img src="images/digital.png" alt="Digital Strategy">
+            <h3>Digital Strategy</h3>
+            <p>Integrating technology solutions with business goals to maximize impact and growth.</p>
+        </div>
+        <div class="skill-card">
+            <img src="images/project.png" alt="Project Management">
+            <h3>Project Management</h3>
+            <p>Planning, organizing, and overseeing projects to ensure successful delivery.</p>
+        </div>
+        <div class="skill-card">
+            <img src="images/problem.png" alt="Problem Solving">
+            <h3>Problem Solving</h3>
+            <p>Identifying challenges and implementing effective, innovative solutions.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- PROJECTS SECTION -->
+<section class="projects" id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+        <div class="project-card">
+            <img src="projects/kiohtours.jpg" alt="Kioh Tours">
+            <div class="project-overlay">
+                <h3>Kioh Tours</h3>
+                <p>Travel Agency Platform | E-Commerce</p>
+                <a href="projects.html">Learn More</a>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="projects/foredatours.jpg" alt="Foreda Tours">
+            <div class="project-overlay">
+                <h3>Foreda Tours</h3>
+                <p>Tour Services Platform | Booking System</p>
+                <a href="projects.html">Learn More</a>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="projects/midasnib.jpg" alt="Midas Nib">
+            <div class="project-overlay">
+                <h3>Midas Nib</h3>
+                <p>Academic Assistance Platform | School Project</p>
+                <a href="projects.html">Learn More</a>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="projects/ziditvet.jpg" alt="Zidi TVET">
+            <div class="project-overlay">
+                <h3>Zidi TVET</h3>
+                <p>Vocational Training Platform | Informative Website</p>
+                <a href="projects.html">Learn More</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- EXPERIENCE SECTION -->
+<section class="experience">
+    <h2>Experience</h2>
+    <div class="experience-cards">
+        <div class="experience-card">
+            <h3>Kenya Civil Aviation Authority</h3>
+            <p>Information Technology Specialist | Feb 2025 - Jun 2025</p>
+        </div>
+        <div class="experience-card">
+            <h3>APS Tech Solutions</h3>
+            <p>Software Developer | Jan 2023 - Jun 2025</p>
+        </div>
+        <div class="experience-card">
+            <h3>Fiverr (Freelance)</h3>
+            <p>Data Analyst | Jan 2022 - Feb 2025</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- PREMIUM FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Main Footer Content -->
+            <div class="footer-content">
+                <!-- About Section -->
+                <div class="footer-section about">
+                    <h3 class="footer-logo">Wangui Hiram</h3>
+                    <p class="footer-desc">
+                        Passionate web developer and designer crafting exceptional digital experiences. 
+                        Specializing in modern web technologies and user-centered design solutions.
+                    </p>
+                    <div class="footer-contact">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Nairobi, Kenya</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+254712345678">+254 785 810 010</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:wanguihiram04@mail.com">wanguihiram04@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section links">
+                    <h4 class="section-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i>Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i>About Me</a></li>
+                        <li><a href="projects.html"><i class="fas fa-chevron-right"></i>Projects</a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i>Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="footer-section services">
+                    <h4 class="section-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-code"></i>Web Development</a></li>
+                        <li><a href="#"><i class="fas fa-paint-brush"></i>UI/UX Design</a></li>
+                        <li><a href="#"><i class="fas fa-search"></i>SEO Optimization</a></li>
+                        <li><a href="#"><i class="fas fa-rocket"></i>Performance</a></li>
+                    </ul>
+                </div>
+
+                <!-- Newsletter & Social -->
+                <div class="footer-section newsletter">
+                    <h4 class="section-title">Stay Connected</h4>
+
+                    <div class="social-links">
+                        <a href="#" class="social-link linkedin" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link github" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link twitter" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link instagram" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link dribbble" aria-label="Dribbble">
+                            <i class="fab fa-dribbble"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p class="copyright">
+                        &copy; <span id="currentYear">2024</span> Wangui Hiram. All rights reserved. 
+                        <span class="love">Made with <i class="fas fa-heart"></i> in Nairobi</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back to Top Button -->
+        <div class="back-to-top" id="backToTop">
+            <i class="fas fa-chevron-up"></i>
+        </div>
+    </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
