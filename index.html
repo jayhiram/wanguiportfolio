@@ -286,7 +286,7 @@
 
 
 /* ================== EXPERIENCE ================== */
-.experience {
+/* .experience {
     padding: 60px 50px;
     text-align: center;
 }
@@ -301,6 +301,114 @@
     background: #E0D7C6;
     padding: 20px;
     border-radius: 12px;
+} */
+
+
+    /* ================== EXPERIENCE ================== */
+.experience {
+    padding: 80px 10% 100px;
+    background-color: #f9f7f2; /* Light professional background */
+    text-align: center;
+}
+
+.experience h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    position: relative;
+    display: inline-block;
+    color: #2c3e50;
+}
+
+/* Subtle underline for the header */
+.experience h2::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background: #8b7d6b; /* Earthy professional accent */
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.experience-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.experience-card {
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 16px;
+    text-align: left; /* Align text left for better readability of bullets */
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+}
+
+.experience-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(139, 125, 107, 0.15);
+    border-color: #8b7d6b;
+}
+
+.experience-card h3 {
+    font-size: 1.4rem;
+    color: #1a1a1a;
+    margin-bottom: 5px;
+}
+
+.experience-card p b {
+    color: #8b7d6b; /* Job title color */
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.experience-card p:nth-of-type(2) {
+    font-size: 0.85rem;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.experience-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.experience-card ul li {
+    font-size: 0.95rem;
+    color: #4a4a4a;
+    margin-bottom: 12px;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 20px;
+}
+
+/* Custom modern bullet points */
+.experience-card ul li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #8b7d6b;
+    font-weight: bold;
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+    .experience {
+        padding: 60px 20px;
+    }
+    .experience-cards {
+        grid-template-columns: 1fr;
+    }
 }
 
 
