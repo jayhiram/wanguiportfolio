@@ -501,75 +501,108 @@
     </section>
 
     <!-- MAIN CONTACT SECTION -->
-  <div class="message-form">
-                <h2>Project Inquiry</h2>
-                <p class="form-subtitle">Select a service area below to start a professional collaboration.</p>
-
-                <form id="contactForm">
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="firstName">First Name</label>
-                            <input type="text" id="firstName" name="firstName" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="lastName">Last Name</label>
-                            <input type="text" id="lastName" name="lastName" required>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="subject">Service Interest</label>
-                        <select id="subject" name="subject" required>
-                            <option value="">Select a topic</option>
-                            <option value="software">Software Engineering</option>
-                            <option value="seo">Technical SEO & AEO</option>
-                            <option value="audit">Technical Site Audits</option>
-                            <option value="automation">Workflow Automation</option>
-                            <option value="analytics">Growth Analytics</option>
-                            <option value="email">Email Marketing Systems</option>
-                            <option value="ld">Learning & Development</option>
-                            <option value="other">Other Inquiry</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Your Message</label>
-                        <textarea id="message" name="message" placeholder="Please provide a brief overview of your requirements..." required></textarea>
-                    </div>
-
-                    <button type="submit" class="submit-btn">Submit Inquiry</button>
-                </form>
-
-                <div class="success-message" id="successMessage">
-                    Inquiry received. A response will be provided shortly.
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="location-section">
-        <h2>Global Presence</h2>
-        <p>Operating remotely for international agencies and clients across the UK, Europe, and the US, with a strategic base in Nairobi.</p>
-
-        <div class="location-info">
-            <div class="location-card">
-                <div class="icon"><i class="fas fa-globe"></i></div>
-                <h3>United Kingdom & Global</h3>
-                <p>Collaborating with UK-based agencies and global partners on high-performance digital solutions.</p>
-            </div>
+ <section class="contact-main">
+    <div class="contact-container">
+        <div class="contact-details">
+            <h2>Let's Collaborate</h2>
+            <p>Available for new projects and strategic partnerships. Whether you are looking to architect a new system, scale your digital presence, or optimize your technical infrastructure, let’s connect.</p>
             
-            <div class="location-card">
-                <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
-                <h3>Nairobi, Kenya</h3>
-                <p>Available for local strategic consultations and regional project leadership.</p>
+            <ul class="communication-methods">
+                <li>
+                    <div class="method-icon"><i class="fas fa-phone"></i></div>
+                    <div class="method-info">
+                        <h4>Phone</h4>
+                        <p><a href="tel:+254799025720">+254 799 025 720</a></p>
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="method-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="method-info">
+                        <h4>Email</h4>
+                        <p><a href="mailto:wanguihiram04@gmail.com">wanguihiram04@gmail.com</a></p>
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="method-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="method-info">
+                        <h4>Location</h4>
+                        <p>Nairobi, Kenya (Global Remote)</p>
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="method-icon"><i class="fas fa-clock"></i></div>
+                    <div class="method-info">
+                        <h4>Availability</h4>
+                        <p>Mon - Fri (Flexible TZ)</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="message-form">
+            <h2>Project Inquiry</h2>
+            <p class="form-subtitle">Fill out the details below to start a technical or strategic consultation.</p>
+
+            <form id="contactForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Service Interest</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Select a topic</option>
+                        <option value="software">Software Engineering</option>
+                        <option value="seo">Technical SEO & AEO</option>
+                        <option value="automation">Process Automation</option>
+                        <option value="analytics">Growth Analytics</option>
+                        <option value="ld">Learning & Development</option>
+                        <option value="other">General Inquiry</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Project Brief</label>
+                    <textarea id="message" name="message" placeholder="Describe your objectives or technical requirements..." required></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">Submit Inquiry</button>
+            </form>
+
+            <div class="success-message" id="successMessage">
+                Inquiry successfully sent. Expect a response shortly.
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<section class="location-section">
+    <h2>Global Operations</h2>
+    <p>Operating as a specialized remote partner for agencies and businesses in the UK, Europe, and the US, with a regional hub in Nairobi.</p>
+
+    <div class="location-info">
+        <div class="location-card">
+            <div class="icon"><i class="fas fa-globe"></i></div>
+            <h3>United Kingdom & International</h3>
+            <p>Managing high-level growth and engineering projects for global markets from a remote environment.</p>
+        </div>
+    </div>
+</section>
 
     
 <!-- PREMIUM FOOTER -->
